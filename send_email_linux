@@ -8,7 +8,7 @@ from email.mime.text import MIMEText
     
 ### function to send email
 
-def envia_email(mesage, subject, to):
+def send_mail(mesage, subject, to):
 
     msg = MIMEMultipart('alternative')
 
@@ -42,6 +42,6 @@ def envia_email(mesage, subject, to):
 
     # and message to send - here it is sent as one string.
 
-    s.sendmail(msg['To'].split(";"), msg['From'], msg.as_string())
+    s.sendmail(msg['From'], msg['To'].split(";"), msg.as_string())
 
     s.quit()
