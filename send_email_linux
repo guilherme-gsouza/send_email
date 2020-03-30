@@ -16,7 +16,7 @@ def envia_email(mesage, subject, to):
     
     msg['From'] = #myemail
 
-    msg['To'] = to
+    msg['To'] = to #if you are going to send the e-mail for multiple recipients you must use ; to separate the adresses 
 
     # Create the body of the message (a plain-text and an HTML version).
 
@@ -42,6 +42,6 @@ def envia_email(mesage, subject, to):
 
     # and message to send - here it is sent as one string.
 
-    s.sendmail(msg['To'], msg['From'], msg.as_string())
+    s.sendmail(msg['To'].split(";"), msg['From'], msg.as_string())
 
     s.quit()
