@@ -36,7 +36,7 @@ def send_mail(mesage, subject, to):
 
     # Send the message via local SMTP server.
 
-    s = smtplib.SMTP('smtprelay.itau')
+    s = smtplib.SMTP('SMTP_SERVER')
 
     # sendmail function takes 3 arguments: sender's address, recipient's address
 
