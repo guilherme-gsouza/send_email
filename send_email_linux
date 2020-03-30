@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 
 from email.mime.text import MIMEText
     
-### função para enviar e-mail
+### function to send email
 
 def envia_email(mesage, subject, to):
 
